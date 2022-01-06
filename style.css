@@ -2,7 +2,6 @@ html {
     display: flex;
     justify-content: center;
     background-color: #F5EEDC;
-    /* bb9f06 */
 }
 
 ::placeholder {
@@ -27,7 +26,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     color: #055961;
@@ -58,20 +56,17 @@ input, select {
 }
 
 .calCount {
-    display: flex;
-    justify-content: center;
     text-align: center;
     margin-top: 40px;
     color: #F5EEDC;
     font-family: 'Libre Baskerville', serif;
     font-style: italic;
-    font-size: 50px;
+    font-size: 40px;
     background-color: #0A565C;
     border-radius: 40px;
 }
 
 .food-input {
-    visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -81,19 +76,13 @@ input, select {
     color: #055961;
 }
 
-.calCount2 {
-    display: flex;
-    justify-content: center;
+.food-list {
     text-align: center;
-    margin-top: -30px;
     color: #055961;
     font-family: 'Libre Baskerville', serif;
     font-style: italic;
-    font-size: 40px;
     background-color: #F5EEDC;
     border-style: dashed;
-    border-width: 3px;
+    border-width: 1px;
     border-color: #095256;
-    border-radius: 40px;
-    visibility: hidden;
 }
