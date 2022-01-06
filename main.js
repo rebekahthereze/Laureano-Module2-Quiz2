@@ -6,6 +6,8 @@ let activity = document.getElementById('activity');
 
 let calculate = document.getElementById('calculate');
 let calCount = document.getElementById('calCount');
+let calCount2 = document.getElementById('calCount2');
+var cal = 0;
 
 calculate.onclick = function() {
     document.getElementById('food-input').style.visibility = "visible";
@@ -17,17 +19,23 @@ calculate.onclick = function() {
     } 
 
     if (activity.value == "1") {
-        calCount.innerHTML = BMR + "<br /> calories/day";  
+        cal = BMR;
+        calCount.innerHTML = cal + "<br /> calories/day";  
     } else if (activity.value == "2") {
-        calCount.innerHTML = Math.round(BMR * 1.2)  + "<br /> calories/day";
+        cal = Math.round(BMR) * 1.2;
+        calCount.innerHTML = cal  + "<br /> calories/day";
     } else if (activity.value == "3") {
-        calCount.innerHTML = Math.round(BMR * 1.375) + "<br /> calories/day";
+        cal = Math.round(BMR * 1.375);
+        calCount.innerHTML = cal + "<br /> calories/day";
     } else if (activity.value == "4") {
-        calCount.innerHTML = Math.round(BMR * 1.55) + "<br /> calories/day";
+        cal = Math.round(BMR * 1.55);
+        calCount.innerHTML = cal + "<br /> calories/day";
     } else if (activity.value == "5") {
-        calCount.innerHTML = Math.round(BMR * 1.725) + "<br /> calories/day";
+        cal = Math.round(BMR * 1.725);
+        calCount.innerHTML =  cal + "<br /> calories/day";
     } else if (activity.value == "6") {
-        calCount.innerHTML = Math.round(BMR * 1.9) + "<br /> calories/day";
+        cal = Math.round(BMR * 1.9);
+        calCount.innerHTML = cal + "<br /> calories/day";
     }
 }
 function getBMRMale() {
@@ -39,3 +47,9 @@ function getBMRFemale() {
     var BMR = (10 * weight.value) + (6.25 * height.value) - (5 * age.value) - 161;
     return BMR;
 }
+
+document.getElementById('calculate2').onclick = function() {
+    calCount2.style.visibility = "visible";
+    remCal = cal - document.getElementById('foodCal').value;
+    calCount2.innerHTML = remCal + "<br /> remaining calories today";
+} 
